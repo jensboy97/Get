@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="data" style="font-size: 100px; text-align: center;">Hei</div>
+    <button onclick="swapcolor('red', 'black', '70px', '400px','outset', '209px' )">1</button>
+    <button onclick="swapcolor('yellow', 'blue', '60px', '70%', 'solid','190px')">2</button>
+
+    <script>
+        function swapcolor(Color, background, text, width, border, height){
+            document.getElementById('data').innerHTML = /*html*/ `
+            <div style="color:${Color}; background-Color: ${background};
+             font-size: ${text}; width: ${width}; border: ${border};
+             height: ${height};"
+            > <br> Get Academy</div>
+            `
+        }
+    </script>
+</body>
+</html>
