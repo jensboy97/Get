@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>velkommen</title>
+    <style>
+        .text{ 
+            border: solid;
+            text-align: center;
+        }
+        
+        img{
+            border: solid ;
+            width: 250px;
+        }
+
+        .button{
+            background-color: black;
+            color: white;
+            border: solid;
+            border-radius: 50%;
+        }
+
+        .button:hover{
+            
+            background-color: goldenrod;
+        }
+    </style>
+</head>
+<body onload="background1()">
+    <div class="text">
+        <button class="button" onclick="background2()">change</button>
+    <div style="font-size: 25px;">
+         Hei mitt navn er Jens Ivar er 26år gammel og kommer fra Ulefoss. <br>
+         Jeg har en sønn på under et år, bonus datter på 9 og en kjæreste på 31. <br>
+         På fritiden liker jeg å spille dataspill, se serie, spise god mat og være med familien.
+    </div>
+    <div id="bilde"></div>
+    </div>
+    <script>
+
+        function background1(){
+    document.body.style.backgroundColor='black'
+        }
+
+        function background2(){
+    document.body.style.backgroundColor='white'
+    document.getElementById('bilde').innerHTML= /*html*/ `
+    <div >
+        <img src="https://scontent.fsvg2-1.fna.fbcdn.net/v/t39.30808-6/278506340_10220505752865142_8155085085226802357_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=a2f6c7&_nc_eui2=AeFqk5xd9VZ9Bk9HNKAYa5QeQf48sywbB3hB_jyzLBsHeP2Bt9eRysjKHpsXwdwS-iE&_nc_ohc=Sz-6fj3Fjy4AX_kFLsr&_nc_ht=scontent.fsvg2-1.fna&oh=00_AfDiMlkP0D7tcVK7vP_owCe9sc_ABJ-ubtMYcSfM6SfM5Q&oe=650F79DB" alt="">
+    </div> `
+}
+    </script>
+</body>
+</html>
