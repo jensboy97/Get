@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.main{
+    display: flex;
+}
+
+.one{
+    background-color: blue;
+    border: solid;
+    width: 100px;
+    height: 100px;
+}
+
+.two{
+    background-color: red;
+    border: solid;
+    width: 100px;
+    height: 100px;
+}
+
+.three{
+    background-color: yellow;
+    border: solid;
+    width: 100px;
+    height: 100px;
+}
+
+.four{
+    background-color: green;
+    border: solid;
+    width: 100px;
+    height: 100px;
+}
+
+.five{
+    border: solid;
+    width: 100px;
+    height: 100px;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div onclick="changeBackground('blue')" class="one"></div> 
+        <div onclick="changeBackground('red')" class="two"></div> 
+        <div onclick="changeBackground('yellow')" class="three"></div>
+    
+        <div onclick="changeBackground('green')" class="four"></div> 
+        <div onclick="changeBackground()" class="five"></div> 
+        <div onclick="changeBackground()" class="five"></div> 
+    </div>
+
+
+    <script>
+ 
+        function changeBackground(backColor){
+    document.body.style.backgroundColor = (backColor)
+ 
+    
+        }
+
+    </script>
+</body>
+</html>
