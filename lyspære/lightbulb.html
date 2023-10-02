@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lys</title>
+    <style>
+        body {
+            text-align: center;
+            
+        }
+        .bulb{
+            border: outset;
+            border-radius: 60%;
+            margin: auto;
+            height: 100px;
+            width: 100px;
+            background-color: grey;
+        }
+
+        .onoff{
+            border: solid;
+            width: 50px;
+            height: 50px;
+            margin-top: 50px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="light" class="bulb">
+    </div>
+
+<button  class="onoff" onclick="roomlight(this)">OFF</button>
+
+    <script>
+
+function roomlight(hallo){
+  if (hallo.innerHTML=="OFF")
+  {yellow();
+    hallo.innerHTML="ON";
+}
+
+  else if (hallo.innerHTML=="ON")
+  {grey()
+    hallo.innerHTML="OFF"
+}
+
+   
+}
+
+function yellow(){
+    document.getElementById('light').style.background='yellow';
+    document.body.style.background='yellow';
+}
+
+function grey(){
+    document.getElementById('light').style.background='grey';
+    document.body.style.background='white';
+}
+
+    </script>
+</body>
+</html>
