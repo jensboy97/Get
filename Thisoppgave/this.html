@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+.screen{
+    border: outset 50px black;
+    height: 300px;
+    width: 500px;
+}
+
+.line{
+display: flex;
+margin:5px
+
+}   
+
+button{
+
+height: 50px;
+width: 50px;
+}
+
+button:hover{
+    background: lightblue;
+}
+
+
+
+    </style>
+</head>
+<body> 
+    <div class="screen" id="screen"></div><br>
+    <div class="line">    
+        <button onclick="keyclick(this)">1</button>
+        <button onclick="keyclick(this)">2</button>
+        <button onclick="keyclick(this)">3</button>
+        <button onclick="keyclick(this)">4</button>
+        <button onclick="keyclick(this)">5</button>
+        <button onclick="keyclick(this)">6</button>
+        <button onclick="keyclick(this)">7</button>
+        <button onclick="keyclick(this)">8</button>
+        <button onclick="keyclick(this)">9</button>
+        <button onclick="keyclick(this)">0</button>
+        <button onclick="enter()">Enter</button>
+        <button onclick="slett(this)">back <br> 404</button>
+    </div>
+
+    <div class="line">    
+        <button onclick="keyclick(this)">q</button>
+        <button onclick="keyclick(this)">w</button>
+        <button onclick="keyclick(this)">e</button>
+        <button onclick="keyclick(this)">r</button>
+        <button onclick="keyclick(this)">t</button>
+        <button onclick="keyclick(this)">y</button>
+        <button onclick="keyclick(this)">u</button>
+        <button onclick="keyclick(this)">i</button>
+        <button onclick="keyclick(this)">o</button>
+        <button onclick="keyclick(this)">p</button>
+        <button onclick="keyclick(this)">å</button>
+    </div>
+    
+    <div class="line">    
+        <button onclick="keyclick(this)">a</button>
+        <button onclick="keyclick(this)">s</button>
+        <button onclick="keyclick(this)">d</button>
+        <button onclick="keyclick(this)">f</button>
+        <button onclick="keyclick(this)">g</button>
+        <button onclick="keyclick(this)">h</button>
+        <button onclick="keyclick(this)">j</button>
+        <button onclick="keyclick(this)">k</button>
+        <button onclick="keyclick(this)">l</button>
+        <button onclick="keyclick(this)">ø</button>
+        <button onclick="keyclick(this)">æ</button>
+    </div>
+    
+    <div class="line">    
+        <button onclick="keyclick(this)">z</button>
+        <button onclick="keyclick(this)">x</button>
+        <button onclick="keyclick(this)">c</button>
+        <button onclick="keyclick(this)">v</button>
+        <button onclick="keyclick(this)">b</button>
+        <button onclick="keyclick(this)">n</button>
+        <button onclick="keyclick(this)">m</button>
+        <button onclick="keyclick(this)">,</button>
+        <button onclick="keyclick(this)">.</button>
+        <button onclick="keyclick(this)">-</button>
+        <button onclick="space()">space</button>
+    </div>
+
+    
+
+<script> 
+
+function keyclick(htmlElement) { 
+let letterPressed = htmlElement.innerHTML 
+document.getElementById('screen').innerHTML += (letterPressed)
+}
+
+function slett()
+{
+    
+}
+
+function enter(){
+    document.getElementById('screen').innerHTML+='<br>'
+}
+
+function space(){
+    document.getElementById('screen').innerHTML+=' '
+}
+</script>
+</body>
+</html>
