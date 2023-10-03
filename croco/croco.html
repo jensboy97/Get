@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body{
+            text-align: center;
+        }
+        .aaa{
+           display: inline-grid; 
+        }
+    </style>
+</head>
+<body onload="reset()">
+    <div id="poeng" style="font-size: x-large;">Poeng: 0</div>
+    <br> <br>
+    
+        <div class="aaa" id="num1"></div>
+        <input id="input" style="text-align: center; width: 10px;"></input>
+        <div class="aaa" id="num2"></div>
+   <br><br>
+    <button onclick="submit()">Submit</button>
+    <button onclick="reset()">Reset</button>
+
+    <script>
+        let points = 0;
+let randoNum1 = 0;
+let randoNum2 = 0;
+
+function submit() {
+    checkSign()
+}
+
+function reset() {
+    randoNum1 = genRandoNum();
+    randoNum2 = genRandoNum();
+    updateView()
+}
+
+function genRandoNum() {
+    return Math.floor(Math.random() * 10);
+}
+
+function compareNum() {
+    if (randoNum1 > randoNum2) {
+        return '>'
+    }
+    if (randoNum1 < randoNum2) {
+        return '<'
+    }
+    if (randoNum1 == randoNum2) {
+        return '='
+    }
+    // > er større enn og < er mindre enn
+}
+
+function checkSign() {
+    let input = document.getElementById('input').value
+    let correctAnswer = compareNum()
+    if (input == correctAnswer) {
+        updatePoints(true)
+    } else {
+        updatePoints(false)
+    }
+}
+
+function updatePoints(resolved) {
+    if (resolved == true) {
+        points++
+        reset()
+    } else {
+        points--
+    }
+updateView()
+}
+
+function updateView() {
+    document.getElementById('poeng').innerHTML = points
+    document.getElementById('num1').innerHTML = randoNum1
+    document.getElementById('num2').innerHTML = randoNum2
+}
+    </script>
+</body>
+<style>
+    img{
+        height: 100px; 
+        width: 100px;
+    }
+    input{
+        width: 50px;
+    }
+</style>
+</html>
