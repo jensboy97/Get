@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body:hover{
+            color: yellow;
+        }
+
+        body{
+            background-color: black;
+            color: white;
+        }
+        button:hover{
+            background-color: yellow;
+        }
+        button{
+            margin: 10px;
+            border-radius: 30px;
+            height: 50px;
+            width: 80px;
+        }
+        
+    </style>
+</head>
+<body>
+<h1>Adjektiv Historie</h1>
+
+    <div id="screen"></div>
+
+
+    <script>
+        //Modell
+    var screen = document.getElementById('screen')
+
+    var racex = '....'
+    var name = '....'
+    var colorx = '....'
+    var snack = '....'
+    
+updateview()
+        //View
+        function updateview(){
+            let HTML = /*html*/ `
+            <div> Det var en gang en  ${racex} som het ${name}. <br>
+                En dag så han et ${colorx} lys fra en hule inærheten. <br>
+                Han var en veldig nysjerrig ${racex}, 
+                så han hadde nødt til å undersøke nærmere. <br>
+                Da han ankom hulen kjente han en lukt som han umulig kan glemme! <br>
+                Han stormet inn hulen og fikk øye på det, det beste han viste ${snack}!<br>
+                Så levde ${name} lykkelig videre i alle sine dager. <br> The End
+                   </div>
+            
+            <button onclick="race(this)">hund</button>
+            <button onclick="race(this)">drage</button>
+            <br>
+            <button onclick="namechange(this)">Kåre</button>  
+            <button onclick="namechange(this)">Frank</button>
+            <br>
+            <button onclick="colorchange(this)">gult</button>
+            <button onclick="colorchange(this)">hvitt</button>
+            <br>
+            <button onclick="snackchange(this)">spaghetti carbonara</button>
+            <button onclick="snackchange(this)">hamburger</button>
+            
+        `;
+        screen.innerHTML=HTML        
+        }
+
+
+        //Controller
+
+        function race(hi) {
+            if (hi.innerHTML=="hund")
+{racex="hund"}
+
+else if (hi.innerHTML="drage")
+{racex="drage"}
+updateview()
+        }
+
+        function namechange(hi) {
+            if (hi.innerHTML=="Kåre")
+{name="Kåre"}
+
+else if (hi.innerHTML="Frank")
+{name="Frank"}
+updateview()
+        }
+
+        function colorchange(hi) {
+            if (hi.innerHTML=="gult")
+{colorx="gult"}
+
+else if (hi.innerHTML="hvitt")
+{colorx="hvitt"}
+updateview()
+        }
+
+        function snackchange(hi) {
+            if (hi.innerHTML=="spaghetti carbonara")
+{snack="spaghetti carbonara"}
+
+else if (hi.innerHTML="hamburger")
+{snack="hamburger"}
+updateview()
+        }
+
+    </script>
+</body>
+</html>
