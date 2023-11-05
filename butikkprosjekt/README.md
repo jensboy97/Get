@@ -1,1 +1,1 @@
-https://jensboy97.github.io/Get/butikkprosjekt/
+https://jensboy97.github.io/Get/store.html/
